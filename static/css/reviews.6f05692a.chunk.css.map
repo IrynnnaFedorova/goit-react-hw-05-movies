@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/reviews.6f05692a.chunk.css","mappings":"AAAA,gCACE,iBACF,CCFA,0CACE,kBACF","sources":["components/ReviewsListItem/ReviewsListItem.module.css","components/ReviewsList/ReviewsList.module.css"],"sourcesContent":[".author {\n  margin-bottom: 5px;\n}\n",".item:not(:last-child) {\n  margin-bottom: 20px;\n}\n"],"names":[],"sourceRoot":""}
