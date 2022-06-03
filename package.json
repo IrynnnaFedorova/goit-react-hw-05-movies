@@ -1,6 +1,7 @@
 {
   "name": "goit-react-hw-05-movies",
   "version": "0.1.0",
+  "homepage": "https://IrynnnaFedorova.github.io/goit-react-hw-05-movies/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -8,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/react-router-dom": "^5.3.3",
     "eslint": "^8.16.0",
+    "gh-pages": "^4.0.0",
     "husky": "^8.0.1",
     "netlify": "^11.0.1",
     "prettier": "^2.6.2",
@@ -22,11 +24,18 @@
     "spinner": "^0.3.4",
     "web-vitals": "^2.1.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrynnnaFedorova/goit-react-hw-05-movies.git"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
