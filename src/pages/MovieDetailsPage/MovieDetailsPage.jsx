@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useHistory, useLocation } from 'react-router-dom';
+import { useParams, BrowserRouter, useLocation } from 'react-router-dom';
 import { fetchFilmById } from '../../service/filmsAPI';
 import FilmCard from '../../components/FilmCard';
 import MovieNavigation from '../../components/MovieNavigation';
@@ -21,7 +21,7 @@ const MovieDetailsPage = () => {
   ] = useState({});
 
   const { movieId } = useParams();
-  const history = useHistory();
+  const history = BrowserRouter();
   const location = useLocation();
 
   useEffect(() => {

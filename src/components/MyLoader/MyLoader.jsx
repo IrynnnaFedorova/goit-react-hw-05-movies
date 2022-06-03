@@ -1,14 +1,14 @@
 import React from 'react';
-import Loader from 'react-loader-spinner';
+import {Rings} from 'react-loader-spinner';
 import c from './MyLoader.module.css';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+//import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
-const MyLoader = () => {
+const Loading = () => {
   return (
     <div className={c.spiner}>
-      <Loader type="BallTriangle" color="black" height={80} width={80} />
+      <Rings type="BallTriangle" color="black" height={80} width={80} />
     </div>
   );
 };
 
-export default MyLoader;
+export default Loading;

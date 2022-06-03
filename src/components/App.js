@@ -1,4 +1,4 @@
-import { Switch, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import { routes } from '../routes';
 import Navbar from './Navbar';
@@ -25,7 +25,7 @@ function App() {
 
       <Container>
         <Suspense fallback={<MyLoader />}>
-          <Switch>
+          <Router>
             <Route path={routes.HOME_PAGE} component={HomePage} exact />
 
             <Route path={routes.MOVIES_PAGE} component={MoviesPage} exact />
@@ -36,7 +36,7 @@ function App() {
             />
 
             <Route component={HomePage} />
-          </Switch>
+          </Router>
         </Suspense>
       </Container>
     </>

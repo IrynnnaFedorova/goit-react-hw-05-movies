@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { BrowserRouter, useLocation } from 'react-router-dom';
 import queryString from 'query-string';
 import { ToastContainer, toast } from 'react-toastify';
 import FilmsList from '../../components/FilmsList/FilmsList';
@@ -7,7 +7,7 @@ import SearchForm from '../../components/SearchForm';
 import { fetchSearchMovies } from '../../service/filmsAPI';
 
 const MoviesPage = () => {
-  const history = useHistory();
+  const history = BrowserRouter();
   const location = useLocation();
   const { search } = location;
   const { query } = queryString.parse(search);

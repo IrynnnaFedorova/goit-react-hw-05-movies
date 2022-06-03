@@ -2,9 +2,9 @@ import { useState, useEffect, Suspense, lazy } from 'react';
 import {
   Route,
   useParams,
-  Switch,
+  Router,
   NavLink,
-  useRouteMatch,
+  useMatch,
   useLocation,
 } from 'react-router-dom';
 import { routes } from '../../routes';
@@ -22,7 +22,7 @@ const MovieNavigation = () => {
   const [reviews, setReviews] = useState(null);
   const location = useLocation();
 
-  const match = useRouteMatch();
+  const match = useMatch();
   const { movieId } = useParams();
 
   useEffect(() => {
@@ -67,14 +67,14 @@ const MovieNavigation = () => {
       </div>
 
       <Suspense fallback={<MyLoader />}>
-        <Switch>
+        <Router>
           <Route path={`${match.path}${routes.CAST}`}>
             <Cast actors={actors} />
           </Route>
           <Route path={`${match.path}${routes.REVIEWS}`}>
             <Reviews reviews={reviews} />
           </Route>
-        </Switch>
+        </Router>
       </Suspense>
     </>
   );
