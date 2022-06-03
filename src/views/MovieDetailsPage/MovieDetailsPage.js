@@ -2,10 +2,10 @@ import { useState, useEffect, Suspense, lazy } from 'react';
 import {
   NavLink,
   useParams,
-  useRouteMatch,
-  Switch,
+  useMatch,
+  Routes,
   Route,
-  useHistory,
+  BrowserRouter,
   useLocation,
 } from 'react-router-dom';
 
@@ -22,11 +22,11 @@ const Reviews = lazy(() =>
 );
 
 export default function MovieDetailsPage() {
-  const history = useHistory();
+  const history = BrowserRouter();
   const location = useLocation();
   const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
-  const { url, path } = useRouteMatch();
+  const { url, path } = useMatch();
   const [error, setError] = useState(null);
   const [status, setStatus] = useState(Status.IDLE);
 
@@ -119,7 +119,7 @@ export default function MovieDetailsPage() {
           </nav>
 
           <Suspense fallback={<LoaderComponent />}>
-            <Switch>
+            <Routes>
               <Route path={`${path}/cast`}>
                 {status === Status.RESOLVED && <Cast />}
               </Route>
@@ -127,7 +127,7 @@ export default function MovieDetailsPage() {
               <Route path={`${path}/reviews`}>
                 {status === Status.RESOLVED && <Reviews />}
               </Route>
-            </Switch>
+            </Routes>
           </Suspense>
         </>
       )}

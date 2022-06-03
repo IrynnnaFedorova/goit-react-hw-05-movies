@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation, useHistory } from 'react-router-dom';
+import { Link, useLocation, BrowserRouter } from 'react-router-dom';
 import apiService from '../../services/apiService';
 import { Pagination } from '@material-ui/lab';
 import useStyles from '../../services/stylesPagination';
@@ -11,7 +11,7 @@ import styles from './HomePage.module.css';
 
 export default function HomePage() {
   const classes = useStyles();
-  const history = useHistory();
+  const history = BrowserRouter();
   const location = useLocation();
   const [movies, setMovies] = useState(null);
   const [totalPage, setTotalPage] = useState(0);

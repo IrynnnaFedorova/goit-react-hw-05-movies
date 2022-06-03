@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import {
   NavLink,
-  useRouteMatch,
-  useHistory,
+  useMatch,
+  BrowserRouter,
   useLocation,
 } from 'react-router-dom';
 
@@ -18,9 +18,9 @@ import styles from './MoviesPage.module.css';
 
 export default function MoviesPage() {
   const classes = useStyles();
-  const history = useHistory();
+  const history = BrowserRouter();
   const location = useLocation();
-  const { url } = useRouteMatch();
+  const { url } = useMatch();
   const [query, setQuery] = useState('');
   const [totalPage, setTotalPage] = useState(0);
   const [movies, setMovies] = useState(null);

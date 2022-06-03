@@ -1,5 +1,5 @@
 import { lazy, useEffect, Suspense } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Container from './components/Container';
 import AppBar from './components/AppBar';
 import LoaderComponent from './components/Loader';
@@ -37,7 +37,7 @@ export default function App() {
     <Container>
       <AppBar />
       <Suspense fallback={<LoaderComponent />}>
-        <Switch>
+        <Routes>
           <Route path="/" exact>
             <HomePage />
           </Route>
@@ -53,7 +53,7 @@ export default function App() {
           <Route>
             <NotFoundView />
           </Route>
-        </Switch>
+        </Routes>
       </Suspense>
 
       <ToastContainer />
