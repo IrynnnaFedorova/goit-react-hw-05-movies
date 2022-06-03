@@ -1,0 +1,23 @@
+.boxLink {
+  display: flex;
+  flex-direction: column;
+}
+
+.boxAdditional {
+  margin-top: 20px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 25px;
+}
+
+.boxTitle {
+  margin-bottom: 10px;
+}
+
+.linkActive {
+  color: darkcyan;
+  text-decoration: underline;
+}
+
+.link {
+  font-size: 18px;
+}

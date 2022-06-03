@@ -1,0 +1,13 @@
+.button {
+  background-color: darkcyan;
+  border-radius: 5px;
+  padding: 5px 20px;
+  border: none;
+  transition: background-color 250ms ease;
+  color: white;
+}
+
+.button:hover,
+.button:focus {
+  background-color: darkorange;
+}

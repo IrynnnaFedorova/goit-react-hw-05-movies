@@ -1,0 +1,33 @@
+.link {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.activeLink {
+  color: darkcyan;
+  text-decoration: underline;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.navListItem {
+  padding: 10px 10px;
+}
+
+.navListItem:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+  background-color: rgb(180, 226, 226);
+}
