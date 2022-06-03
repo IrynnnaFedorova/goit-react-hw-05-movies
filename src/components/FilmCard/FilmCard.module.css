@@ -1,0 +1,25 @@
+.filmCard {
+  display: flex;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  border-bottom: 1px solid #000;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.imgFilm {
+  max-width: 320px;
+  min-width: 320px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.overview {
+  margin-top: 10px;
+}
+
+.img {
+  width: 320px;
+}

@@ -1,0 +1,7 @@
+.genres {
+  margin-top: 10px;
+}
+
+.genre:not(:last-child) {
+  margin-right: 5px;
+}

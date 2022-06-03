@@ -1,0 +1,21 @@
+.filmsList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.filmsListItem {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  width: calc(100% / 5 - 30px);
+
+  transform: scale(1);
+  transition: transform 250ms ease;
+}
+
+.filmsListItem:hover,
+.filmsListItem:focus {
+  transform: scale(1.05);
+}
