@@ -90,8 +90,8 @@ export default function MovieDetailsPage() {
             </div>}
         <div>
             <p>Additional information</p>
-            <Link to={`/movies/${movieId}/cast`} className={s.link}>Cast</Link>
-            <Link to={`/movies/${movieId}/reviews`} className={s.link}>Reviews</Link>
+            <Link to={`/movies/${movieId}/cast`} className={s.link}>Cast /</Link>
+            <Link to={`/movies/${movieId}/reviews`} className={s.link}> Reviews</Link>
         </div>
         <Outlet/>
     </Container>
