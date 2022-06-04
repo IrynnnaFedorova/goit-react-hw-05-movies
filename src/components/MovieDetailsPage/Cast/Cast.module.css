@@ -1,0 +1,13 @@
+.cast{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cast__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.image{
+    width: 100px;
+}

@@ -1,13 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import c from './Container.module.css';
+import s from './Container.module.css';
 
-const Container = ({ children }) => {
-  return <div className={c.container}>{children}</div>;
-};
+export default function Container({ children }) {
+    return <div className={s.container}>
+        {children}
+    </div>
+}
 
 Container.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export default Container;
+    children: PropTypes.node,
+}
