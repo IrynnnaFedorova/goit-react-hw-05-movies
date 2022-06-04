@@ -1,19 +1,19 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from 'react-router-dom';
-import Wrapper from "components/Wrapper";
-import Section from "components/Section";
-import Container from "components/Container";
-import AppBar from 'components/AppBar';
+import Wrapper from "./components/Wrapper";
+import Section from "./components/Section";
+//import Container from "./components/Container";
+import AppBar from './components/AppBar';
 import { ToastContainer } from 'react-toastify';
 // import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BeatLoader from "react-spinners/BeatLoader";
 
-const HomePage = lazy(() => import('components/HomePage' /* webpackChunkName: "home-page" */))
-const MoviesPage = lazy(() => import('components/MoviesPage' /* webpackChunkName: "movies-page" */))
-const MovieDetailsPage = lazy(() => import('components/MovieDetailsPage' /* webpackChunkName: "movie-details-page" */))
-const Cast = lazy(() => import('components/MovieDetailsPage/Cast' /* webpackChunkName: "cast" */))
-const Reviews = lazy(()=>import('components/MovieDetailsPage/Reviews' /* webpackChunkName: "reviews" */))
+const HomePage = lazy(() => import('./components/HomePage' /* webpackChunkName: "home-page" */))
+const MoviesPage = lazy(() => import('./components/MoviesPage' /* webpackChunkName: "movies-page" */))
+const MovieDetailsPage = lazy(() => import('./components/MovieDetailsPage' /* webpackChunkName: "movie-details-page" */))
+const Cast = lazy(() => import('./components/MovieDetailsPage/Cast' /* webpackChunkName: "cast" */))
+const Reviews = lazy(()=>import('./components/MovieDetailsPage/Reviews' /* webpackChunkName: "reviews" */))
 
 export default function App() {
     return (

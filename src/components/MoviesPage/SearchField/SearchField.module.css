@@ -3,8 +3,6 @@
     justify-content: center;
     align-items: center;
     padding: 20px 0;
-    background-color: #1565c0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     z-index: 100;
 }
 
@@ -23,7 +21,7 @@
     border-radius: 20px;
     border: none;
     outline: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
         width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -36,7 +34,7 @@
 
 .input:focus {
     width: 300px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); 
 }
 
 .button {
@@ -53,17 +51,11 @@
 
     background-color: #EF6401;
     color: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
-    transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-        background-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-        color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
     cursor: pointer;
 }
 
 .button:hover,
 .button:focus {
     outline: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
 }

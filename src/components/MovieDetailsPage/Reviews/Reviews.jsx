@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieReviews } from 'services/movies-api';
+import { fetchMovieReviews } from '../../../services/movies-api';
 import s from './Reviews.module.css';
 
 export default function Reviews() {

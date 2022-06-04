@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
-import { fetchMovies } from 'services/movies-api';
-import MoviesList from 'components/MoviesList';
+import { fetchMovies } from '../../../services/movies-api';
+import MoviesList from '../../MoviesList';
 import MoviesListItem from '../../MoviesListItem';
-import normalizedData from 'services/normalized-data';
-import s from './MoviesSearchList.module.css';
+import normalizedData from '../../../services/normalized-data';
+//import s from './MoviesSearchList.module.css';
 import { toast } from 'react-toastify';
 
 export default function MoviesSearchList({searchQuery}) {

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import MoviesList from 'components/MoviesList';
+import MoviesList from '../../MoviesList';
 import MoviesListItem from '../../MoviesListItem';
-import normalizedData from 'services/normalized-data';
-import { fetchTrendingMovies } from 'services/movies-api';
-import s from './TrendingMovies.module.css';
+import normalizedData from '../../../services/normalized-data';
+import { fetchTrendingMovies } from '../../../services/movies-api';
+//import s from './TrendingMovies.module.css';
 
 export default function TrendingMovies() {
     const [movies, setMovies] = useState([]);

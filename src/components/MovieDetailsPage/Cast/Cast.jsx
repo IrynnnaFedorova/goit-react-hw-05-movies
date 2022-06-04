@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieCredits } from 'services/movies-api';
+import { fetchMovieCredits } from '../../../services/movies-api';
 import s from './Cast.module.css';
 
 export default function Cast() {

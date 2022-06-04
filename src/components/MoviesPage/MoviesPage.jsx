@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Container from 'components/Container';
+import Container from '../Container';
 import SearchField from './SearchField';
 import MoviesSearchList from './MoviesSearchList';
 import { toast } from 'react-toastify';
-import s from './MoviesPage.module.css';
+//import s from './MoviesPage.module.css';
 
 export default function MoviesPage() {
     const [searchQuery, setSearchQuery] = useState('');

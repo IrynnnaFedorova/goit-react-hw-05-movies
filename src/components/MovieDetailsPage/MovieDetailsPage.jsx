@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams, Outlet, useNavigate, useLocation } from 'react-router-dom';
-import { fetchMovieDetails } from 'services/movies-api';
-import { genresNames } from 'services/genres-names';
+import { fetchMovieDetails } from '../../services/movies-api';
+import { genresNames } from '../../services/genres-names';
 import { Link } from 'react-router-dom';
-import Container from 'components/Container';
+import Container from '../../components/Container';
 import s from './MovieDetailsPage.module.css';
 
 export default function MovieDetailsPage() {
