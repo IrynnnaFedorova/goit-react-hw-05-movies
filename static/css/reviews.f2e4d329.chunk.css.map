@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/reviews.f2e4d329.chunk.css","mappings":"AAAA,wBAGI,eAAgB,CAFhB,QAAS,CACT,SAEJ,CAEA,+CACI,kBACJ","sources":["components/MovieDetailsPage/Reviews/Reviews.module.css"],"sourcesContent":[".reviews {\n    margin: 0;\n    padding: 0;\n    list-style: none;\n}\n\n.reviews__item:not(:last-child) {\n    margin-bottom: 20px;\n}"],"names":[],"sourceRoot":""}
