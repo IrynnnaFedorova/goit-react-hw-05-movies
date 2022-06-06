@@ -13,7 +13,7 @@ function SearchField(props) {
         event.preventDefault();
 
         if (searchQuery.trim() === '') {
-            //Setting searchQuery state '' in case query got spaces
+            
             setSearchQuery('');
 
             return toast.info("Input your search query");

@@ -30,11 +30,3 @@ export default function Reviews() {
     </>
 }
 
-// Reviews.propTypes = {
-//   data: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       title: PropTypes.string.isRequired,
-//     })
-//   ),
-// };

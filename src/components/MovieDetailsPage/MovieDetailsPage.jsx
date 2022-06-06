@@ -10,14 +10,17 @@ export default function MovieDetailsPage() {
     const { movieId } = useParams();
     const [movie, setMovie] = useState('');
     const [from, setFrom] = useState(null);
+    const [searchBack, setSearchBack] = useState('');
 
     const navigate = useNavigate();
     const { state } = useLocation();
     
+    
     useEffect(() => {
         if (state?.from) {
-            const { pathname } = state.from;
+            const { pathname, search } = state.from;
             setFrom(pathname);
+            setSearchBack(search);
         }
     },[state?.from])
 
@@ -26,12 +29,12 @@ export default function MovieDetailsPage() {
             .then(data => {
                 normalizedData(data);
                 setMovie(data);
-                console.log(data)
+                
             })
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [movieId])
 
-    // Normalizing genres in data
+    
     function normalizedData(results) {
         createGenres(genresNames, results.genres);
         
@@ -52,13 +55,13 @@ export default function MovieDetailsPage() {
 
     function goBackHandle() {
         if (from === null) {
-            //Go back functionality for first load of page from address bar
+            
             navigate('/', { replace: true });
             return;
         }
 
         else {
-            navigate(from);
+            navigate(`${from}${searchBack}`);
         }
     }
 
@@ -80,18 +83,20 @@ export default function MovieDetailsPage() {
                     <p>{movie.overview}</p>
                     <h2>Genres</h2>
                     <ul className={s.genres}>
-                        {movie.genres.map(({ id, name }) => (
-                            <li className={s.genres__item} key={id}>
-                                {name}
-                            </li>
-                        ))}
+                        {movie.genres.length > 0
+                            ? movie.genres.map(({ id, name }) => (
+                                <li className={s.genres__item} key={id}>
+                                    {name}
+                                </li>
+                            ))
+                            : <p className={s.genres__item}>Other</p>}
                     </ul>
                 </div>
             </div>}
         <div>
             <p>Additional information</p>
-            <Link to={`/movies/${movieId}/cast`} className={s.link}>Cast /</Link>
-            <Link to={`/movies/${movieId}/reviews`} className={s.link}> Reviews</Link>
+            <Link to={`/movies/${movieId}/cast`} className={s.link}>Cast</Link>
+            <Link to={`/movies/${movieId}/reviews`} className={s.link}>Reviews</Link>
         </div>
         <Outlet/>
     </Container>
